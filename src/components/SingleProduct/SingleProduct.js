@@ -4,7 +4,7 @@ import React from 'react';
 import './SingleProduct.css';
 
 
-const SingleProduct = ({products}) => {
+const SingleProduct = ({products, handleBtn}) => {
     const element = <FontAwesomeIcon icon={faCartShopping} />
 
     console.log(products);
@@ -17,7 +17,7 @@ const SingleProduct = ({products}) => {
                 <p><small>manufacture: {products.seller} </small></p>
                 <p><small>Ratings: {products.ratings} star</small></p>
             </div>
-                <button>Add to cart {element} </button>
+                <button onClick={()=> handleBtn(products.id)}>Add to cart {element} </button>
         </div>
     );
 };

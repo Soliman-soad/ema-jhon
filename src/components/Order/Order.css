@@ -1,0 +1,7 @@
+.order-container {
+    height: 100vh;
+    position: sticky;
+    top: 0px;
+    background-color: bisque;
+    padding: 20px;
+}
