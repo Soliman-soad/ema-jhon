@@ -4,7 +4,9 @@ import './Order.css';
 const Order = (props) => {
     let total = 0;
     let shippingCost =0;
+    let quantity = 0;
     for(const product of props.cart){
+        quantity = quantity + product.quantity;
         total = total + product.price;
         shippingCost = shippingCost + product.shipping;
     }
@@ -12,7 +14,7 @@ const Order = (props) => {
     return (
         <div className='order-container'>
             <h3>Order list</h3>
-            <p>Product selected: {props.cart.length}</p>
+            <p>Product selected: {quantity}</p>
             <p>Total price: {total} </p>
             <p>Total shopping charge:{shippingCost} </p>
             <p>Tax: {tax} </p>
