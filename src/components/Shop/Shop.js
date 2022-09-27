@@ -19,7 +19,7 @@ const Shop = () => {
     return (
         <div className='container'>
             <Product handleBtn={handleBtn} products={products}></Product>
-            <Order cart={cart} products={products}></Order>
+            <Order cart={cart}></Order>
         </div>
     );
 };
